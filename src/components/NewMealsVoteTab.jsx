@@ -93,7 +93,7 @@ export default function NewMealsVoteTab() {
               aria-pressed={checked}
               className={`flex flex-col items-start rounded-xl border-2 p-4 text-left transition ${
                 checked
-                  ? "border-brand-green bg-brand-green/10"
+                  ? "border-brand-green bg-gradient-to-br from-brand-green/10 to-amber-400/10 shadow-sm"
                   : "border-gray-200 bg-white hover:border-gray-300"
               }`}
             >
@@ -115,10 +115,22 @@ export default function NewMealsVoteTab() {
                 {meal.description}
               </p>
               <div className="mt-3 flex gap-1.5">
-                <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-medium text-gray-600">
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-[11px] font-medium ${
+                    meal.difficulty === "Easy"
+                      ? "bg-teal-100 text-teal-700"
+                      : "bg-amber-100 text-amber-800"
+                  }`}
+                >
                   {meal.difficulty}
                 </span>
-                <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-medium text-gray-600">
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-[11px] font-medium ${
+                    meal.popularity === "High"
+                      ? "bg-rose-100 text-rose-700"
+                      : "bg-sky-100 text-sky-700"
+                  }`}
+                >
                   {meal.popularity} demand
                 </span>
               </div>

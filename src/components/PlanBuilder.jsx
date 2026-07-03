@@ -37,7 +37,7 @@ export default function PlanBuilder({
                     onClick={() => onChangeWeeks(opt.weeks)}
                     className={`rounded-xl border-2 px-4 py-4 text-center transition ${
                       planWeeks === opt.weeks
-                        ? "border-brand-green bg-brand-green/10 text-brand-green"
+                        ? "border-brand-green bg-gradient-to-br from-brand-green/15 to-amber-400/10 text-brand-green-dark shadow-sm"
                         : "border-gray-200 text-gray-700 hover:border-gray-300"
                     }`}
                   >
@@ -66,7 +66,7 @@ export default function PlanBuilder({
                     onClick={() => onChangeMealsPerWeek(n)}
                     className={`rounded-xl border-2 py-4 text-center text-lg font-bold transition ${
                       mealsPerWeek === n
-                        ? "border-brand-green bg-brand-green/10 text-brand-green"
+                        ? "border-brand-green bg-gradient-to-br from-brand-green/15 to-amber-400/10 text-brand-green-dark shadow-sm"
                         : "border-gray-200 text-gray-700 hover:border-gray-300"
                     }`}
                   >

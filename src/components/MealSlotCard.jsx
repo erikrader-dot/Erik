@@ -4,6 +4,7 @@ import { addOns } from "../data/addOns";
 import { formatCurrency } from "../utils/format";
 import MealImage from "./MealImage";
 import AddOnsSelector from "./AddOnsSelector";
+import NutritionLabel from "./NutritionLabel";
 
 export default function MealSlotCard({
   weekNumber,
@@ -65,6 +66,16 @@ export default function MealSlotCard({
           )}
         </div>
       </div>
+
+      {selectedMeal && (
+        <div className="mt-4">
+          <NutritionLabel
+            nutrition={selectedMeal.nutrition}
+            nutritionWithAvocado={selectedMeal.nutritionWithAvocado}
+            compact
+          />
+        </div>
+      )}
 
       {slot.mealId && (
         <div className="mt-4 border-t border-gray-100 pt-4">

@@ -1,4 +1,6 @@
 import MealImage from "./MealImage";
+import NutritionLabel from "./NutritionLabel";
+import { badgeColorClasses } from "../utils/badgeColors";
 
 export default function MealCard({ meal }) {
   return (
@@ -6,7 +8,9 @@ export default function MealCard({ meal }) {
       <div className="relative">
         <MealImage src={meal.image} alt={meal.name} className="h-48 w-full" />
         {meal.badge && (
-          <span className="absolute left-3 top-3 rounded-full bg-brand-green px-3 py-1 text-xs font-semibold text-black shadow">
+          <span
+            className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold shadow ${badgeColorClasses(meal.badge)}`}
+          >
             {meal.badge}
           </span>
         )}
@@ -16,9 +20,15 @@ export default function MealCard({ meal }) {
         <p className="mt-1 text-xs font-medium uppercase tracking-wide text-brand-green">
           {meal.weight}
         </p>
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-600">
+        <p className="mt-3 text-sm leading-relaxed text-gray-600">
           {meal.description}
         </p>
+        <div className="mt-4">
+          <NutritionLabel
+            nutrition={meal.nutrition}
+            nutritionWithAvocado={meal.nutritionWithAvocado}
+          />
+        </div>
       </div>
     </div>
   );

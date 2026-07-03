@@ -3,9 +3,10 @@ import { business } from "../data/business";
 export default function HeroSection({ onStart }) {
   return (
     <section className="relative overflow-hidden bg-black text-white">
-      <div className="pointer-events-none absolute inset-0 opacity-20">
+      <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-brand-green blur-3xl" />
-        <div className="absolute -right-24 top-40 h-72 w-72 rounded-full bg-brand-green blur-3xl" />
+        <div className="absolute -right-24 top-32 h-80 w-80 rounded-full bg-amber-400 blur-3xl" />
+        <div className="absolute bottom-[-6rem] left-1/3 h-72 w-72 rounded-full bg-rose-500 blur-3xl" />
       </div>
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-20 text-center sm:px-6 sm:py-28">

@@ -1,4 +1,4 @@
-import { meals } from "../data/meals";
+import { meals, nutritionDisclaimer } from "../data/meals";
 import MealCard from "./MealCard";
 
 export default function MealOptionsSection() {
@@ -20,6 +20,10 @@ export default function MealOptionsSection() {
             <MealCard key={meal.id} meal={meal} />
           ))}
         </div>
+
+        <p className="mt-6 text-center text-xs text-gray-400">
+          {nutritionDisclaimer}
+        </p>
       </div>
     </section>
   );
