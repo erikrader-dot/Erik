@@ -36,7 +36,6 @@ export default function MealSlotCard({
         <MealImage
           src={selectedMeal?.image}
           alt={selectedMeal?.name || "No meal selected"}
-          emoji={selectedMeal?.emoji || "🍽️"}
           className="h-32 w-full rounded-xl sm:h-full"
         />
 

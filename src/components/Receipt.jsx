@@ -138,6 +138,14 @@ export default function Receipt({ order, onNewOrder }) {
                 <p className="text-gray-600">{customer.notes}</p>
               </div>
             )}
+            <div>
+              <p className="font-bold text-gray-900">
+                Future Meal Suggestions:
+              </p>
+              <p className="text-gray-600">
+                {customer.futureMeals || "None provided"}
+              </p>
+            </div>
           </div>
 
           <div className="mt-6 rounded-lg border-2 border-brand-green bg-brand-green/10 p-4 text-center">

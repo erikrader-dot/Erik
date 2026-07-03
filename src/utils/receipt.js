@@ -68,6 +68,9 @@ export function buildReceiptText(order) {
     lines.push(customer.notes);
   }
   lines.push("");
+  lines.push("Future Meal Suggestions:");
+  lines.push(customer.futureMeals || "None provided");
+  lines.push("");
   lines.push(
     `TEXT THIS RECEIPT TO ${business.textNumberDisplay} AND ZELLE THE FINAL TOTAL. YOUR MEALS WILL BE STARTED AFTER PAYMENT IS RECEIVED.`
   );

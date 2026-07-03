@@ -1,8 +1,8 @@
 import { business } from "../data/business";
 
-export default function Header({ step, onLogoClick }) {
+export default function Header({ onLogoClick }) {
   return (
-    <header className="sticky top-0 z-40 bg-black text-white">
+    <header className="bg-black text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <button
           onClick={onLogoClick}
@@ -20,12 +20,6 @@ export default function Header({ step, onLogoClick }) {
             </span>
           </span>
         </button>
-
-        {step !== "home" && (
-          <span className="rounded-full border border-gray-700 px-3 py-1 text-xs font-medium text-gray-300">
-            Building your order
-          </span>
-        )}
       </div>
     </header>
   );

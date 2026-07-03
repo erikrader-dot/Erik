@@ -45,6 +45,13 @@ export default function CustomerInfoForm({ customer, onChange }) {
           placeholder="Anything else we should know?"
           textarea
         />
+        <Field
+          label="Are there any other meals you would like to see added in the future?"
+          value={customer.futureMeals}
+          onChange={handle("futureMeals")}
+          placeholder="e.g. more vegetarian options, a shrimp bowl..."
+          textarea
+        />
       </div>
 
       <p className="mt-5 rounded-lg bg-gray-50 p-3 text-xs leading-relaxed text-gray-500">
