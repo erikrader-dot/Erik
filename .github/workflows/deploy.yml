@@ -1,10 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - claude/meal-prep-website-ieiolv
   workflow_dispatch:
+  # Auto-deploy on push is disabled while the site is taken offline.
+  # Re-add a `push:` trigger here (see git history) to resume auto-deploys.
 
 permissions:
   contents: read
