@@ -42,8 +42,8 @@ export default function DataTable({ columns, rows, initialSortKey, initialSortDi
   }
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
-      <table className="w-full min-w-max text-left text-sm">
+    <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+      <table className="w-full min-w-max text-left text-sm text-slate-700 dark:text-slate-300">
         <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500 dark:bg-slate-800/60 dark:text-slate-400">
           <tr>
             {columns.map((col) => (

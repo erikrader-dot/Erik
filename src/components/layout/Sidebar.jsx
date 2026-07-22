@@ -21,7 +21,7 @@ export default function Sidebar({ open, onClose }) {
         <nav className="px-3 py-4">
           {NAV_GROUPS.map((group) => (
             <div key={group.label} className="mb-5">
-              <div className="mb-1.5 px-2 text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+              <div className="mb-1.5 px-2 text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 {group.label}
               </div>
               <div className="space-y-0.5">
